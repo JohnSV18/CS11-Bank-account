@@ -20,11 +20,22 @@ class BankAccount:
    
     def get_balance(self):
         print(f'Your account balance is ${self.balance}.00')
+        # return (f'{self.balance}')
+
+    def add_interest(self):
+        interest = self.balance * 0.00083
+        self.balance += interest
+
+    def print_receipt(self):
+        print(f' {self.full_name} \n Account No.:{self.account_number} \n Routing No.:{self.routing_number} \n Balance:${self.balance}.00 ')
 
 
 
-john = BankAccount("John", "123456")
 
-john.deposit(25)
-john.withdraw(26)
-john.get_balance()
+    
+
+
+
+john = BankAccount("John Marcos", 12345678)
+steve = BankAccount("Steve Jobs", 35353535)
+abby = BankAccount("Abby Flores", 17171717)
